@@ -47,7 +47,7 @@
 
 <h2>Tecnologías Utilizadas:</h2>
 <ul>
-  <li><strong>Java 17</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
+  <li><strong>Java 21</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
   <li><strong>Spring Security</strong> con tokens JWT para autenticación.</li>
   <li><strong>PostgreSQL</strong> como base de datos para todos los microservicios.</li>
   <li><strong>Swagger</strong> para la documentación interactiva de los endpoints.</li>
