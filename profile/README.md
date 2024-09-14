@@ -2,6 +2,17 @@
 
 <p>Este es el backend para un e-commerce diseñado en un entorno de colaboración utilizando la metodología Agile Scrum. El proyecto es parte de un curso en el que los equipos de frontend y backend trabajaron en conjunto para desarrollar una solución de tienda en línea. Los servicios fueron desplegados para ser consumidos por aplicaciones frontend, implementando autenticación básica y utilizando Spring Security con un filtro personalizado para generar y verificar tokens JWT.</p>
 
+## Arquitectura
+
+![Diagrama de Arquitectura](https://drive.google.com/uc?export=view&id=108cMvBN2_YkJelG_fotMMbMRPrbQs4Bp)
+
+## Pantallas y contratos
+
+![Pantalla de Productos](https://drive.google.com/uc?export=view&id=10BirTizdYLkunm4B5Op8ujiacPR3Vq1N)
+![Pantalla de Login](https://drive.google.com/uc?export=view&id=10CTPOiL6wcnKMxBlkcB-fepzW6TUh85p)
+![Pantalla de Login](https://drive.google.com/uc?export=view&id=10HaRjStbj4-XLKuxaKmBK36NGWIaw_cC)
+
+
 <h2>Descripción</h2>
 
 <p>El proyecto tiene una arquitectura basada en microservicios, que permite la gestión de productos, usuarios, comentarios y ventas de una tienda en línea. Cada microservicio tiene su propia base de datos y está diseñado para ser independiente. La arquitectura sigue un enfoque sencillo, sin servidor de autenticación separado. En su lugar, la API de usuarios maneja el registro y login, generando tokens JWT que luego se utilizan para autenticar las solicitudes a otros microservicios.</p>
