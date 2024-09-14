@@ -22,6 +22,7 @@
   <li><strong>API de Productos</strong>: Incluye filtros de búsqueda, paginación y manejo de imágenes para cargar y mostrar en la app móvil.</li>
   <li><strong>Despliegue en Render</strong>: Los microservicios fueron desplegados utilizando Render, para ser consumidos por las aplicaciones frontend.</li>
   <li><strong>Swagger</strong>: Implementado para la documentación interactiva de los endpoints de la API.</li>
+  <li><strong>Postman</strong>: Utilizado para probar los endpoints localmente y en los servicios desplegados en Render.</li>
 </ul>
 
 <h2>Arquitectura</h2>
@@ -35,13 +36,14 @@
 
 <h2>Tecnologías Utilizadas:</h2>
 <ul>
-  <li><strong>Java 21</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
+  <li><strong>Java 17</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
   <li><strong>Spring Security</strong> con tokens JWT para autenticación.</li>
   <li><strong>PostgreSQL</strong> como base de datos para todos los microservicios.</li>
   <li><strong>Swagger</strong> para la documentación interactiva de los endpoints.</li>
   <li><strong>MapStruct</strong> para el mapeo de entidades y DTOs.</li>
   <li><strong>Docker</strong> para contenedorización y despliegue.</li>
   <li><strong>Maven</strong> como gestor de dependencias.</li>
+  <li><strong>Postman</strong> para las pruebas de los endpoints locales y desplegados.</li>
   <li><strong>GitHub</strong> con Git Flow para control de versiones y gestión de ramas.</li>
   <li><strong>Trello</strong> para la organización del backlog y las tareas.</li>
   <li><strong>Metodología Scrum</strong>: Sprints de dos semanas con entregas continuas.</li>
@@ -50,6 +52,10 @@
 <h2>Colaboración con Frontend</h2>
 
 <p>Los equipos de frontend desarrollaron una app móvil en <strong>Android Studio</strong> utilizando <strong>Kotlin</strong> como lenguaje de programación. La API fue consumida principalmente por esta app móvil, que hacía uso de los microservicios desarrollados en este backend para la funcionalidad de la tienda en línea.</p>
+
+<h2>Base de Datos</h2>
+
+<p>La base de datos <strong>PostgreSQL</strong> fue desplegada en Render y se utilizó un gestor de bases de datos para conectarse y ejecutar scripts. Aunque no se usó <strong>Flyway</strong> para la gestión de migraciones, se llevó un seguimiento manual de los scripts de base de datos, que puedes encontrar en cada proyecto dentro del folder <code>scripts</code>, donde se registraron las modificaciones y actualizaciones realizadas.</p>
 
 <h2>Instalación y Ejecución</h2>
 
@@ -67,16 +73,11 @@ mvn spring-boot:run</code></pre>
     <ul>
       <li><strong>Usuarios</strong>: <a href="http://localhost:8080/api/users">http://localhost:8080/api/users</a></li>
       <li><strong>Productos</strong>: <a href="http://localhost:8081/api/products">http://localhost:8081/api/products</a></li>
-      <li><strong>Ventas</strong>: <a href="http://localhost:8082/api/sales">http://localhost:8082/api/sales</a></li>
     </ul>
     <p>Cada servicio requiere un token JWT para acceder, excepto el login y registro de usuarios.</p>
   </li>
 </ol>
 
-<h2>Testing</h2>
-
-<p>Ejecuta las pruebas unitarias con:</p>
-<pre><code>mvn test</code></pre>
 
 <h2>Despliegue</h2>
 
@@ -90,6 +91,3 @@ mvn spring-boot:run</code></pre>
   </li>
 </ol>
 
-<h2>Licencia</h2>
-
-<p>Este proyecto está bajo la licencia MIT.</p>
