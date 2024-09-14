@@ -9,11 +9,9 @@
 <h3>Microservicios Implementados:</h3>
 <ul>
   <li><strong>API de Usuarios</strong>: Gestión de usuarios, registro, login y generación de tokens JWT.</li>
-  <li><strong>API de Productos</strong>: Gestión de productos disponibles en la tienda.</li>
-  <li><strong>API de Ventas</strong>: Procesamiento de ventas y órdenes.</li>
-  <li><strong>API de Compras</strong>: Manejo del carrito de compras y transacciones.</li>
-  <li><strong>API de Comentarios</strong>: Gestión de comentarios de productos.</li>
-  <li><strong>API de Pagos</strong>: Procesamiento de pagos.</li>
+  <li><strong>API de Productos</strong>: Gestión de productos disponibles en la tienda, incluyendo filtros de búsqueda, paginación, carga de productos y manejo de imágenes para mostrar en la app móvil.</li>
+  <li><strong>API de Comentarios</strong>: Servicio precargado con datos de prueba para permitir a la app móvil consumir y mostrar comentarios.</li>
+  <li><strong>API de Métodos de Pago</strong>: Servicio básico precargado con datos de métodos de pago para consumo por parte de la app móvil.</li>
 </ul>
 
 <h3>Características Principales:</h3>
@@ -21,8 +19,9 @@
   <li><strong>Autenticación con JWT</strong>: Login y registro básico en la API de usuarios, generación de tokens JWT que se utilizan para validar las solicitudes a otros microservicios.</li>
   <li><strong>Microservicios desacoplados</strong>: Cada API es independiente y está diseñada para gestionar su propia funcionalidad.</li>
   <li><strong>Seguridad</strong>: Integración de Spring Security con un filtro personalizado para manejar la autenticación.</li>
-  <li><strong>Colaboración con Frontend</strong>: Comunicación constante con los equipos de frontend para definir contratos de API y asegurar que las funcionalidades cumplan con los requisitos.</li>
+  <li><strong>API de Productos</strong>: Incluye filtros de búsqueda, paginación y manejo de imágenes para cargar y mostrar en la app móvil.</li>
   <li><strong>Despliegue en Render</strong>: Los microservicios fueron desplegados utilizando Render, para ser consumidos por las aplicaciones frontend.</li>
+  <li><strong>Swagger</strong>: Implementado para la documentación interactiva de los endpoints de la API.</li>
 </ul>
 
 <h2>Arquitectura</h2>
@@ -36,13 +35,21 @@
 
 <h2>Tecnologías Utilizadas:</h2>
 <ul>
-  <li><strong>Java 17</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
+  <li><strong>Java 21</strong> y <strong>Spring Boot</strong> para el desarrollo de microservicios.</li>
   <li><strong>Spring Security</strong> con tokens JWT para autenticación.</li>
+  <li><strong>PostgreSQL</strong> como base de datos para todos los microservicios.</li>
+  <li><strong>Swagger</strong> para la documentación interactiva de los endpoints.</li>
+  <li><strong>MapStruct</strong> para el mapeo de entidades y DTOs.</li>
   <li><strong>Docker</strong> para contenedorización y despliegue.</li>
+  <li><strong>Maven</strong> como gestor de dependencias.</li>
   <li><strong>GitHub</strong> con Git Flow para control de versiones y gestión de ramas.</li>
   <li><strong>Trello</strong> para la organización del backlog y las tareas.</li>
   <li><strong>Metodología Scrum</strong>: Sprints de dos semanas con entregas continuas.</li>
 </ul>
+
+<h2>Colaboración con Frontend</h2>
+
+<p>Los equipos de frontend desarrollaron una app móvil en <strong>Android Studio</strong> utilizando <strong>Kotlin</strong> como lenguaje de programación. La API fue consumida principalmente por esta app móvil, que hacía uso de los microservicios desarrollados en este backend para la funcionalidad de la tienda en línea.</p>
 
 <h2>Instalación y Ejecución</h2>
 
@@ -86,4 +93,3 @@ mvn spring-boot:run</code></pre>
 <h2>Licencia</h2>
 
 <p>Este proyecto está bajo la licencia MIT.</p>
-
